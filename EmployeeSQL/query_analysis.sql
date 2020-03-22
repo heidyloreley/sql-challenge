@@ -14,7 +14,7 @@ where hire_date > '1986-01-01' and hire_date <= '1986-12-31';
 
 --3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name, and start and end employment dates.
 
-select e.emp_no, e.last_name, e.first_name
+select e.emp_no, e.last_name, e.first_name, d.dept_no, d.dept_name, m.emp_no,  m.from_date, m.to_date 
 from departments d
 join dep_manager m
 on (d.dept_no = m.dept_no)
